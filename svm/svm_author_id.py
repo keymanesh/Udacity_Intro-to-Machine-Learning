@@ -26,6 +26,27 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
+print("original size of features are ", len(features_train))
+#features_train = features_train[:round(len(features_train)/100)]
+#labels_train = labels_train[:round(len(labels_train)/100)] 
+from sklearn.svm import SVC
+print(1)
+clf = SVC(kernel="rbf", C=10000)
+print(2)
+clf.fit(features_train, labels_train)
+print(3)
+pred = clf.predict(features_test)
+print(4)
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(labels_test, pred)
+counter = 0
+for pre in pred:
+	if pre==1:
+		counter += 1
+
+print("prediction for chris ", counter)
+
+print("accuracy is ", accuracy)
 
 #########################################################
 
