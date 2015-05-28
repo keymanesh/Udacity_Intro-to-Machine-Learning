@@ -108,7 +108,7 @@ Recall: it says what percentage of POIs was predicted (classified) correctly by 
  
 Following is the performance metrics for my Random Forest Classifier:
 
-*accuracy*: 0.909090909091
+*accuracy*: 0.909
 
 *f1 score*: 0.5
 
